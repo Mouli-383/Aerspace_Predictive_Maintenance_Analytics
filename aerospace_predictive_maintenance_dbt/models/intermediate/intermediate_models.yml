@@ -1,0 +1,77 @@
+version: 2
+
+models:
+
+  - name: int_engine_sensor_trends
+
+    columns:
+
+      - name: engine_id
+        tests:
+          - not_null
+
+      - name: cycle
+        tests:
+          - not_null
+
+      - name: data_source
+        tests:
+          - not_null
+
+      - name: maximum_cycle
+        tests:
+          - not_null
+
+      - name: lifecycle_percentage
+        tests:
+          - not_null
+
+
+  - name: int_engine_degradation_metrics
+
+    columns:
+
+      - name: engine_id
+        tests:
+          - not_null
+
+      - name: cycle
+        tests:
+          - not_null
+
+      - name: data_source
+        tests:
+          - not_null
+
+      - name: average_sensor_deviation
+        tests:
+          - not_null
+
+
+  - name: int_engine_health_scores
+
+    columns:
+
+      - name: engine_id
+        tests:
+          - not_null
+
+      - name: cycle
+        tests:
+          - not_null
+
+      - name: data_source
+        tests:
+          - not_null
+
+      - name: degradation_score
+        tests:
+          - not_null
+
+      - name: engine_health_score
+        tests:
+          - not_null
+
+      - name: risk_level
+        tests:
+          - not_null

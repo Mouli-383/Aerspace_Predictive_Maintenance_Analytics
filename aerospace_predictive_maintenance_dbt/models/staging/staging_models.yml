@@ -1,0 +1,47 @@
+version: 2
+
+models:
+
+  - name: stg_engine_sensor_data
+    description: >
+      Unified staging model containing both TRAIN and TEST
+      NASA CMAPSS engine sensor records.
+
+    columns:
+
+      - name: engine_id
+        tests:
+          - not_null
+
+      - name: cycle
+        tests:
+          - not_null
+
+      - name: data_source
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - TRAIN
+                  - TEST
+
+
+  - name: stg_rul_data
+    description: >
+      Standardized Remaining Useful Life data used for
+      TEST engine maintenance analysis.
+
+    columns:
+
+      - name: engine_id
+        tests:
+          - not_null
+
+      - name: remaining_useful_life
+        tests:
+          - not_null
+
+      - name: dataset_id
+        tests:
+          - not_null

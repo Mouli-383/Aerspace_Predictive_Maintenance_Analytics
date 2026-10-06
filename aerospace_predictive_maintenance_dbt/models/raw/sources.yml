@@ -1,0 +1,54 @@
+version: 2
+
+sources:
+
+  - name: raw
+    database: AEROSPACE_PREDICTIVE_MAINTENANCE_DB
+    schema: RAW
+
+    tables:
+
+      - name: train_data
+        description: Raw NASA CMAPSS training engine sensor data.
+
+        columns:
+
+          - name: ENGINE_ID
+            tests:
+              - not_null
+
+          - name: CYCLE
+            tests:
+              - not_null
+
+
+      - name: test_data
+        description: Raw NASA CMAPSS test engine sensor data.
+
+        columns:
+
+          - name: ENGINE_ID
+            tests:
+              - not_null
+
+          - name: CYCLE
+            tests:
+              - not_null
+
+
+      - name: rul_data
+        description: Remaining Useful Life data associated with test engines.
+
+        columns:
+
+          - name: ENGINE_ID
+            tests:
+              - not_null
+
+          - name: REMAINING_USEFUL_LIFE
+            tests:
+              - not_null
+
+          - name: DATASET_ID
+            tests:
+              - not_null

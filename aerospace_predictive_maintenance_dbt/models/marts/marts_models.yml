@@ -1,0 +1,158 @@
+version: 2
+
+models:
+
+  # ==========================================================
+  # ENGINE HEALTH HISTORY
+  # ==========================================================
+
+  - name: mart_engine_health_history
+
+    columns:
+
+      - name: data_source
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - TRAIN
+                  - TEST
+
+      - name: engine_id
+        tests:
+          - not_null
+
+      - name: cycle
+        tests:
+          - not_null
+
+      - name: engine_health_score
+        tests:
+          - not_null
+
+      - name: degradation_score
+        tests:
+          - not_null
+
+      - name: risk_level
+        tests:
+          - not_null
+
+
+  # ==========================================================
+  # CURRENT ENGINE HEALTH
+  # ==========================================================
+
+  - name: mart_engine_current_health
+
+    columns:
+
+      - name: data_source
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - TRAIN
+                  - TEST
+
+      - name: engine_id
+        tests:
+          - not_null
+
+      - name: latest_cycle
+        tests:
+          - not_null
+
+      - name: maximum_cycle
+        tests:
+          - not_null
+
+      - name: engine_health_score
+        tests:
+          - not_null
+
+      - name: degradation_score
+        tests:
+          - not_null
+
+      - name: risk_level
+        tests:
+          - not_null
+
+
+  # ==========================================================
+  # FLEET HEALTH
+  # ==========================================================
+
+  - name: mart_fleet_health
+
+    columns:
+
+      - name: data_source
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - TRAIN
+                  - TEST
+
+      - name: total_engines
+        tests:
+          - not_null
+
+      - name: average_fleet_health_score
+        tests:
+          - not_null
+
+      - name: critical_engine_count
+        tests:
+          - not_null
+
+      - name: fleet_health_percentage
+        tests:
+          - not_null
+
+
+  # ==========================================================
+  # MAINTENANCE PRIORITY
+  # ==========================================================
+
+  - name: mart_maintenance_priority
+
+    columns:
+
+      - name: data_source
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values:
+                  - TRAIN
+                  - TEST
+
+      - name: engine_id
+        tests:
+          - not_null
+
+      - name: latest_cycle
+        tests:
+          - not_null
+
+      - name: engine_health_score
+        tests:
+          - not_null
+
+      - name: degradation_score
+        tests:
+          - not_null
+
+      - name: risk_level
+        tests:
+          - not_null
+
+      - name: maintenance_priority
+        tests:
+          - not_null

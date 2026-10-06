@@ -1,0 +1,7 @@
+USE AerospacePredictiveMaintenanceDB;
+GO
+
+
+SELECT *
+FROM INFORMATION_SCHEMA.TABLES
+WHERE TABLE_SCHEMA = 'cmaps';

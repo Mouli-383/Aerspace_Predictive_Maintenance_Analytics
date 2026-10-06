@@ -1,0 +1,152 @@
+Aerospace_Predictive_Maintenance_Analytics/
+│
+├── data/
+│   │
+│   ├── raw/
+│   │   │
+│   │   └── cmapss/
+│   │       │
+│   │       ├── train_FD001.txt
+│   │       ├── test_FD001.txt
+│   │       ├── RUL_FD001.txt
+│   │       │
+│   │       ├── train_FD002.txt
+│   │       ├── test_FD002.txt
+│   │       ├── RUL_FD002.txt
+│   │       │
+│   │       ├── train_FD003.txt
+│   │       ├── test_FD003.txt
+│   │       ├── RUL_FD003.txt
+│   │       │
+│   │       ├── train_FD004.txt
+│   │       ├── test_FD004.txt
+│   │       ├── RUL_FD004.txt
+│   │       │
+│   │       ├── readme.txt
+│   │       └── Damage_Propagation_Modeling.pdf
+│   │
+│   ├── processed/
+│   │
+│   ├── curated/
+│   │
+│   └── metadata/
+│
+├── notebooks/
+│   │
+│   ├── phase_01_dataset_understanding/
+│   │   └── phase_01_dataset_profiling.ipynb
+│   │
+│   ├── phase_02_python_ingestion/
+│   │
+│   └── analytics_exploration/
+│
+├── src/
+│   │
+│   ├── ingestion/
+│   │
+│   ├── processing/
+│   │
+│   ├── validation/
+│   │
+│   ├── database/
+│   │
+│   ├── analytics/
+│   │
+│   └── utils/
+│
+├── sql/
+│   │
+│   ├── sql_server/
+│   │   ├── ddl/
+│   │   ├── dml/
+│   │   ├── procedures/
+│   │   └── validation_queries/
+│   │
+│   └── snowflake/
+│       ├── setup/
+│       ├── schemas/
+│       ├── stages/
+│       └── loading/
+│
+├── dbt_project/
+│   │
+│   ├── models/
+│   │   ├── staging/
+│   │   ├── intermediate/
+│   │   └── marts/
+│   │
+│   ├── tests/
+│   │
+│   ├── macros/
+│   │
+│   └── seeds/
+│
+├── airflow/
+│   │
+│   ├── dags/
+│   │
+│   ├── plugins/
+│   │
+│   └── logs/
+│
+├── tableau/
+│   │
+│   ├── dashboards/
+│   │
+│   └── exports/
+│
+├── excel_reports/
+│   │
+│   ├── templates/
+│   │
+│   └── generated_reports/
+│
+├── documentation/
+│   │
+│   ├── phase_00_business_architecture/
+│   │
+│   ├── phase_01_dataset_understanding/
+│   │
+│   ├── phase_02_python_ingestion/
+│   │
+│   ├── phase_03_sql_server/
+│   │
+│   ├── phase_04_snowflake/
+│   │
+│   ├── phase_05_dbt/
+│   │
+│   ├── phase_06_data_quality/
+│   │
+│   ├── phase_07_airflow/
+│   │
+│   ├── phase_08_analytics/
+│   │
+│   ├── phase_09_tableau/
+│   │
+│   ├── phase_10_excel/
+│   │
+│   └── phase_11_github_portfolio/
+│
+├── config/
+│   │
+│   ├── config.yaml
+│   └── logging_config.yaml
+│
+├── tests/
+│   │
+│   ├── unit/
+│   └── integration/
+│
+├── outputs/
+│   │
+│   ├── profiling/
+│   │
+│   ├── visualizations/
+│   │
+│   └── reports/
+│
+├── requirements.txt
+│
+├── README.md
+│
+└── .gitignore
